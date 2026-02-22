@@ -2,6 +2,8 @@ import logging
 from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 
+# Configure logging at the root level to capture INFO logs
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class LoggingMiddleware(BaseHTTPMiddleware):
